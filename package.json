@@ -1,0 +1,8 @@
+{
+  "name": "banking-e2e-playwright",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1"
+  }
+}
