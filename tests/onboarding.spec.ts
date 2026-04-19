@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-
-test('Check bank', async ({ page }) => {
+import { OnboardingLocators } from '../locators/onboarding.locators';
+test('Onboarding flow', async ({ page }) => {
   await page.goto('http://localhost:8080');
 
   await page.fill('input[name=email]', 'test@test.ro');
@@ -9,13 +9,13 @@ test('Check bank', async ({ page }) => {
   await page.click('button[type=submit]');
 
 
-  await page.fill('input[name=bank_name]', 'BankCheck');
-  await page.click('button[id="currency_dropdown_bank_balance"]');
-  await page.click('a[data-id="11"]');
-  await page.fill('input[name=bank_balance]', '10000');
-  await page.fill('input[name=savings_balance]', '5000');
-  await page.selectOption('select[id=lang_holder]', 'ro_RO');
-  await page.click('input[type=submit]');
+  await page.fill(OnboardingLocators.bank_name_input, 'BankCheck');
+  await page.click(OnboardingLocators.currency_dropdown_button);
+  await page.click(OnboardingLocators.currency_option_ron);
+  await page.fill(OnboardingLocators.bank_balance_input, '10000');
+  await page.fill(OnboardingLocators.savings_balance_input, '5000');
+  await page.selectOption(OnboardingLocators.language_select, 'ro_RO');
+  await page.click(OnboardingLocators.submit_button);
 
 
 await page.getByText('Conturi').nth(0).click();

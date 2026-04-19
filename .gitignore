@@ -9,3 +9,5 @@ blob-report/
 
 # Env
 .env
+
+.DS_Store
