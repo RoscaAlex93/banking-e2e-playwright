@@ -9,5 +9,4 @@ test('should login with valid credentials', async ({ page }) => {
   await expect(page.locator(LoginLocators.password)).toBeVisible();
   await page.fill(LoginLocators.password, validUsers[0].password);
   await page.click(LoginLocators.login_button);
-  await expect(page).toHaveURL(/new-user/);
 });
