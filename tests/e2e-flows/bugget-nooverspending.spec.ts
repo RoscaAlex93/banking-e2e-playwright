@@ -10,7 +10,7 @@ const budgetName = createBudgetName();
 const Buget = BugetName();
 const sumValue = randomAmount(); 
 
-test('Validate buget flow', async ({ page }) => {
+test('Validate overspending buget flow', async ({ page }) => {
   await page.goto('http://localhost:8080');
 
   await page.fill(LoginLocators.email, validUsers[0].email);
@@ -21,7 +21,9 @@ test('Validate buget flow', async ({ page }) => {
 
 await page.goto('http://localhost:8080/budgets/create');
 await page.fill('#ffInput_name', Buget);
-  await page.locator('.btn-success').click();
+await page.locator('#ffInput_auto_budget_type').selectOption('1');
+await page.fill('#ffInput_auto_budget_amount', '6000')
+ await page.locator('.btn-success').click();
 
 
   await page.goto('http://localhost:8080/accounts/create/asset');
@@ -33,10 +35,6 @@ await page.fill('#ffInput_name', Buget);
  await page.fill('#ffInput_name', categoryName);
  await page.locator('.btn-success').click();
 
-
-await page.goto('http://localhost:8080/budgets/create');
-await page.fill('#ffInput_name', budgetName);
-await page.locator('.btn-succes');
 
 await page.goto('http://localhost:8080/transactions/withdrawal');
     await page.getByText('Creează o tranzacție nouă').click();
@@ -62,25 +60,14 @@ await page.locator('section.dropdown li', { hasText: categoryName}).click();
 
 
 
-await page.fill('input[name="amount[]"]', sumValue.toString());
+await page.fill('input[name="amount[]"]', '5000');
 await page.fill('input[name="foreign_amount[]"]','0');
 await page.locator('#submitButton').click();
 
 await page.goto('http://localhost:8080/budgets');
-await page.getByRole('link', { name: Buget }).click();
-
 await expect(
-  page.locator('tr', { hasText: transactionDescription })
-).toBeVisible();
-
-await expect(
-  page.locator('tr', {hasText: categoryName })
-).toBeVisible();
-
-await expect(
-  page.locator('tr', {hasText: sumValue.toString() })
-).toBeVisible();
-
+  page.locator('tr', { hasText: Buget })
+).toContainText('1.000,00');
 
 
 
