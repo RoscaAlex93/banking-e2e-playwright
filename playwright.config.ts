@@ -29,6 +29,7 @@ export default defineConfig({
     {
       name: 'webkit',
       use: {
+        baseURL: 'http://localhost:8080',
         ...devices['Desktop Safari'], // Safari-like
       },
     },

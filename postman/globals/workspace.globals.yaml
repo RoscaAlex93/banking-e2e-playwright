@@ -1,0 +1,5 @@
+name: Globals
+values:
+  - key: Login
+    value: ''
+    enabled: true

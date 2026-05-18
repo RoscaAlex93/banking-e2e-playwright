@@ -1,23 +1,4 @@
 
-export function getNextMonthYear() {
-  const date = new Date();
-  date.setMonth(date.getMonth() + 1);
-
-  return date.toLocaleString('ro-RO', {
-    month: 'long',
-    year: 'numeric'
-  });
-}
-
-export function getPreviousMonthYear() {
-  const date = new Date();
-  date.setMonth(date.getMonth() - 1);
-
-  return date.toLocaleString('ro-RO', {
-    month: 'long',
-    year: 'numeric'
-  });
-}
 
 export function getTomorrowFormatted() {
   const date = new Date();
@@ -31,7 +12,7 @@ export function getTomorrowFormatted() {
 export function getPreviousMonthDate() {
 
   const date = new Date();
-  date.setDate(1); // evită bug-uri
+  date.setDate(1);
   date.setMonth(date.getMonth() - 1);
   return date.toISOString().split('T')[0]; 
 }
@@ -42,8 +23,8 @@ export function getPreviousMonthDate() {
 export function getPreviousYearDate() {
   const date = new Date();
 
-  date.setDate(1);        // stabilitate
-  date.setMonth(0);       // ianuarie (opțional, dar safe)
+  date.setDate(1);
+  date.setMonth(0);      
   date.setFullYear(date.getFullYear() + 1);
 
   return date.toISOString().split('T')[0];
@@ -56,3 +37,17 @@ export function getPreviousDayDate() {
 
   return date.toISOString().split('T')[0];
 }
+
+
+
+export function getTodayDate(){
+  const date = new Date();
+  return date.toISOString().split('T')[0];
+}
+
+export function getLastWeek(){
+  const date = new Date();
+  date.setDate(date.getDate() - 7);
+  return date.toISOString().split('T')[0];
+}
+
