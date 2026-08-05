@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../../pages/login-page';
-import { WithdrawalPage } from '../../pages/withdrawal-page';
+import { TransactionPage } from '../../pages/transaction-page';
 import { LiabiliteiesPage } from '../../pages/liabilities-page';
 import { createCreditName } from '../../utils/dataFactory';
 import { getPreviousDayDate } from '../../utils/date';

@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { BugetPage } from '../../pages/buget-page';
 import { LoginPage } from '../../pages/login-page';
 import { BugetlistPage } from '../../pages/bugetlist-page';
-import { WithdrawalPage } from '../../pages/withdrawal-page';
+import { TransactionPage } from '../../pages/transaction-page';
 import { createBudgetName } from '../../utils/dataFactory';
 import { createDBConnection } from '../../utils/db';
 import { transactionName } from '../../utils/dataFactory';
@@ -38,7 +38,6 @@ expect(bugetDb.length).toBeGreaterThan(0);
 
 await withdrawalPage.goto();
 await withdrawalPage.create(transactionDescription, '100', 'cont unu', bugetName);
-console.log('Generated description:', transactionDescription);
 await expect(withdrawalPage.successMessage).toContainText('Succes!');
 
  const [transactionDb] = await (connection as any).query(

@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { LoginPage } from '../../pages/login-page';
 import { SubscriptionPage } from '../../pages/subscription-page';
 import { subscriptionName } from '../../utils/dataFactory';
-import { WithdrawalPage } from '../../pages/withdrawal-page';
+import { TransactionPage } from '../../pages/transaction-page';
 import { tagName } from '../../utils/dataFactory';
 test('e2e flow for subscription', async ({ page }) => {
   const subscription = subscriptionName();

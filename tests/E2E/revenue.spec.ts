@@ -2,7 +2,7 @@ import { test } from '@playwright/test';
 import { LoginPage } from '../../pages/login-page';
 import { RevenuePage } from '../../pages/revenue-page';
 import { accountName } from '../../utils/dataFactory';
-import { DepositPage } from '../../pages/deposit-page';
+import { TransactionPage } from '../../pages/transaction-page';
 import { transactionName } from '../../utils/dataFactory';
 import { createDBConnection } from '../../utils/db';
 

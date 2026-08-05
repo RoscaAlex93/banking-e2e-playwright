@@ -11,3 +11,4 @@ export const tagName = () =>`Tag_${Date.now()}`;
 export const PiggyName = () =>`Piggy_${Date.now()}`;
 export const SubscriptionTransaction =() => `Subscriptionbill_${Date.now()}`;
 export const randomAmount = () => Math.floor(Math.random() * 1000) + 1;
+export const ruleTitle =() => `Rule title_${Date.now()}`;

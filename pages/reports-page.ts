@@ -34,9 +34,5 @@ readonly assertionLocator: Locator;
     await this.dataRange.fill(`${lastWeek} - ${Today}`);
     await this.submitButton.click();
   }
-
-async assertionReports(name: string) {
-  await expect(this.assertionLocator.getByText(name)).toBeVisible();
-}
   
 }
