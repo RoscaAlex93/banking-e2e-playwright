@@ -78,9 +78,7 @@ asertionPiggy(name: string) {
 
 async clickPiggy(name: string) {
 
-    await this.page
-     this.page.locator('a', { hasText: name })
-     .click();
+    await this.page.locator('a', { hasText: name }).click();
 
 }
 
