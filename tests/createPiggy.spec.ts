@@ -31,7 +31,7 @@ test('Create piggy account with optional fields', async ({ page }) => {
 
   await piggyPage.goto();
   await piggyPage.create(name, '1000', '1', 'asd');
-  await expect(page.locator('.alert-success')).toContainText('Succes');
+  await expect(page.locator('.alert-success')).toContainText('Success');
 
 
   await piggyPage.goto();

@@ -33,7 +33,7 @@ export class PiggyPage {
     this.notes = page.locator('#ffInput_notes');
     this.file = page.locator('#ffInput_attachments');
     this.inputFile = page.locator('#ffInput_attachments');
-    this.succes = page.locator('alert-success');
+    this.succes = page.locator('.alert-success');
 
   }
 
