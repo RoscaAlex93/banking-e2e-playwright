@@ -6,15 +6,16 @@ import { TransactionPage } from '../../pages/transaction-page';
 import { createBudgetName } from '../../utils/dataFactory';
 import { createDBConnection } from '../../utils/db';
 import { transactionName } from '../../utils/dataFactory';
+import { getTodayDate } from '../../utils/date';
 
 test('e2e flow for buget', async ({ page }) => {
   const bugetName = createBudgetName();
   const connection = await createDBConnection();
   const transactionDescription = transactionName();
-
+  const Today = getTodayDate();
   const loginPage = new LoginPage(page);
   const bugetPage = new BugetPage(page);
-  const withdrawalPage = new WithdrawalPage(page);
+  const withdrawalPage = new TransactionPage(page);
   const bugetlistPage = new BugetlistPage(page);
 
   await loginPage.goto();
@@ -36,9 +37,9 @@ expect(bugetDb.length).toBeGreaterThan(0);
 
 
 
-await withdrawalPage.goto();
-await withdrawalPage.create(transactionDescription, '100', 'cont unu', bugetName);
-await expect(withdrawalPage.successMessage).toContainText('Succes!');
+await withdrawalPage.gotocreateExpenses();
+await withdrawalPage.createTrsansaction(transactionDescription,'cont unu','cont', '100','category','tag',Today, 'notes');
+await expect(page.locator('.alert-success')).toContainText('Success');
 
  const [transactionDb] = await (connection as any).query(
  'SELECT * FROM transaction_journals WHERE description = ?',
