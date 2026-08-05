@@ -12,7 +12,6 @@ import 'dotenv/config';
 test('Create an expense transaction', async ({ page }) => {
   const loginPage = new LoginPage(page);
   const transactionPage = new TransactionPage(page);
-  const token = process.env.API_TOKEN;
   const connection = await createDBConnection();
   
   const today = getTodayDate();
