@@ -38,7 +38,7 @@ expect(bugetDb.length).toBeGreaterThan(0);
 
 
 await withdrawalPage.gotocreateExpenses();
-await withdrawalPage.createTrsansaction(transactionDescription,'cont unu','dawdawd', '100','1','tag',Today, 'notes');
+await withdrawalPage.createTrsansaction(transactionDescription,'cont unu','dawdawd', '100',bugetName,'1','tag',Today, 'notes');
 await expect(page.locator('.alert-success')).toContainText('Success');
 
  const [transactionDb] = await (connection as any).query(
@@ -54,4 +54,4 @@ await connection.end();
 
 await bugetlistPage.goto();
 await page.getByRole('link', { name: bugetName }).click();
-await expect(page.getByRole('link', { name: bugetName })).toBeVisible();});
+await expect(page.getByRole('link', { name: transactionDescription })).toBeVisible();});
