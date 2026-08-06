@@ -4,7 +4,6 @@ import { BugetPage } from '../pages/buget-page'
 import { BugetName } from '../utils/dataFactory';
 import { createDBConnection } from '../utils/db';
 import { deleteBuget } from '../utils/api';
-import 'dotenv/config';
 
 test('Create a buget', async ({ page }) => {
   const loginPage = new LoginPage(page);

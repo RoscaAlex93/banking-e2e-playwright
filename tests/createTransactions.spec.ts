@@ -5,8 +5,6 @@ import { getTodayDate } from '../utils/date';
 import { createDBConnection } from '../utils/db';
 import { transactionName } from '../utils/dataFactory';
 import { deleteTransaction } from '../utils/api';
-import 'dotenv/config';
-
 
 
 test('Create an expense transaction', async ({ page }) => {
@@ -73,9 +71,7 @@ test('Create an deposit transaction', async ({ page }) => {
   transactionId
 
 );
-console.log(response.status());
-console.log(await response.text());
-console.log(process.env.API_TOKEN);
+
 expect(response.ok()).toBeTruthy();
 });
 

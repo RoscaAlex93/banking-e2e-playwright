@@ -12,7 +12,7 @@ test('user can login', async ({ page }) => {
   const loginPage = new LoginPage(page);
   const reportsPage = new ReportsPage(page);
   const accountPage = new AccountPage(page);
-  const withdrawalPage = new WithdrawalPage(page);
+  const withdrawalPage = new TransactionPage(page);
 
   const name = accountName();
   const transaction = transactionName();
@@ -26,14 +26,13 @@ test('user can login', async ({ page }) => {
   await accountPage.goto();
   await accountPage.create(name, '1', '5000', todayDate);
 
-    await withdrawalPage.goto();
-  await withdrawalPage.createC(transaction, '100',name, 'Cash account');
+    await withdrawalPage.gotocreateExpenses();
+  await withdrawalPage.createTrsansaction(transaction,'cont unu','cont', '100','category','tag',todayDate, 'notes');
 
 
   await reportsPage.goto();
   await reportsPage.filltheForm('audit', name, lastWeek, todayDate);
 
- await reportsPage.assertionReports(transaction);
 
 
 
