@@ -1,6 +1,6 @@
 import { Page, Locator } from '@playwright/test';
 
-export class BugetlistPage {
+export class BudgetlistPage {
   readonly page: Page;
 
 
@@ -15,7 +15,7 @@ export class BugetlistPage {
     await this.page.goto('budgets');
   }
 
-async checkBuget(name: string) {
+async checkBudget(name: string) {
 
 
 }

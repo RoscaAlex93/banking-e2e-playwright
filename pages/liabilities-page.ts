@@ -5,13 +5,13 @@ export class LiabiliteiesPage {
   readonly page: Page;
   readonly name: Locator;
   readonly currency: Locator;
-  readonly ownAmmount: Locator;
+  readonly ownAmount: Locator;
   readonly liabilityDirection: Locator;
   readonly startDate: Locator;
   readonly interesValue: Locator;
   readonly interesPeriod: Locator;
   readonly submitButton: Locator;
-  readonly asertionLocator: Locator;
+  readonly assertionLocator: Locator;
 
 
 
@@ -19,13 +19,13 @@ export class LiabiliteiesPage {
     this.page = page;
     this.name = page.locator('#ffInput_name');
     this.currency = page.locator('#ffInput_currency_id');
-    this.ownAmmount = page.locator('#ffInput_opening_balance');
+    this.ownAmount = page.locator('#ffInput_opening_balance');
     this.liabilityDirection = page.locator('#ffInput_liability_direction');
     this.startDate = page.locator('#ffInput_opening_balance_date');
     this.interesValue = page.locator('#ffInput_interest');
     this.interesPeriod = page.locator('#ffInput_interest_period');
     this.submitButton = page.locator('.btn-success');
-    this.asertionLocator = page.locator('.sortable-object');
+    this.assertionLocator = page.locator('.sortable-object');
     
 
 
@@ -38,10 +38,10 @@ export class LiabiliteiesPage {
     await this.page.goto('/accounts/liabilities');
   }
 
-  async fillTheForm(name: string, currencyValue: string, ownammountValue: string, debit: string, lastMounth: string, interesvalue: string, interesperiod: string,) {
+  async fillTheForm(name: string, currencyValue: string, ownAmountValue: string, debit: string, lastMounth: string, interesvalue: string, interesperiod: string,) {
    await this.name.fill(name)
    await this.currency.selectOption(currencyValue);
-   await this.ownAmmount.fill(ownammountValue);
+   await this.ownAmount.fill(ownAmountValue);
    await this.liabilityDirection.selectOption(debit);
    await this.startDate.fill(lastMounth);
    await this.interesValue.fill(interesvalue);
