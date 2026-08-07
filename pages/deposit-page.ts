@@ -6,7 +6,7 @@ export class DepositPage {
   readonly source: Locator;
   readonly destination: Locator;
   readonly amount: Locator;
-  readonly buget: Locator;
+  readonly budget: Locator;
   readonly submit: Locator;
   readonly account: Locator;
 readonly successMessage: Locator;
@@ -18,7 +18,7 @@ this.page = page;
     this.source = page.locator('input[name="source[]"]');
     this.destination = page.locator('input[name="destination[]"]');
     this.amount = page.locator('input[name="amount[]"]');
-    this.buget = page.locator('select[name="budget[]"]');
+    this.budget = page.locator('select[name="budget[]"]');
     this.submit = page.locator('.btn-success');
     this.account = page.getByRole('button', { name: /^Cont Unu\b/ });
     this.successMessage = page.locator('.alert-success');

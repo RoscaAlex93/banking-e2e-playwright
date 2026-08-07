@@ -26,10 +26,10 @@ const transaction = transactionName();
   await withdrawalPage.createC(transaction, '1000', name, 'Cont unu');
   
 
-  const [bugetDb] = await (connection as any).query(
+  const [budgetDb] = await (connection as any).query(
   'SELECT * FROM accounts WHERE name = ?',
   [name]
 );
 
-expect(bugetDb.length).toBeGreaterThan(0);
+expect(budgetDb.length).toBeGreaterThan(0);
 });

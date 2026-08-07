@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
-import { BugetPage } from '../../pages/buget-page';
+import { BudgetPage } from '../../pages/budget-page';
 import { LoginPage } from '../../pages/login-page';
-import { BugetlistPage } from '../../pages/bugetlist-page';
+import { BudgetlistPage } from '../../pages/budgetlist-page';
 import { WithdrawalPage } from '../../pages/withdrawal-page';
 import { createBudgetName } from '../../utils/dataFactory';
 import { createDBConnection } from '../../utils/db';
@@ -13,9 +13,9 @@ test('e2e flow for buget', async ({ page }) => {
   const transactionDescription = transactionName();
 
   const loginPage = new LoginPage(page);
-  const bugetPage = new BugetPage(page);
+  const bugetPage = new BudgetPage(page);
   const withdrawalPage = new WithdrawalPage(page);
-  const bugetlistPage = new BugetlistPage(page);
+  const budgetlistPage = new BudgetlistPage(page);
 
   await loginPage.goto();
   await loginPage.login('test@test.ro', 'testtesttesttest');
@@ -52,7 +52,7 @@ await connection.end();
 
 
 
-await bugetlistPage.goto();
+await budgetlistPage.goto();
 await page.getByRole('link', { name: bugetName }).click();
 await expect(page.getByText(transactionDescription)).toBeVisible();
 });

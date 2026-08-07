@@ -6,7 +6,7 @@ export class WithdrawalPage {
   readonly source: Locator;
   readonly destination: Locator;
   readonly amount: Locator;
-  readonly buget: Locator;
+  readonly budget: Locator;
   readonly submit: Locator;
   readonly account: Locator;
 readonly successMessage: Locator;
@@ -18,7 +18,7 @@ readonly successMessage: Locator;
     this.source = page.locator('input[name="source[]"]');
     this.destination = page.locator('input[name="destination[]"]');
     this.amount = page.locator('input[name="amount[]"]');
-    this.buget = page.locator('select[name="budget[]"]');
+    this.budget = page.locator('select[name="budget[]"]');
     this.submit = page.locator('.btn-success');
     this.account = page.getByRole('button', { name: /^Cont Unu\b/ });
     this.successMessage = page.locator('.alert-success');
@@ -42,33 +42,33 @@ readonly successMessage: Locator;
 
 
 
-  async create(name: string, ammount: string, source: string, buget: string) {
+  async create(name: string, amount: string, source: string, budget: string) {
     await this.description.fill(name);
     await this.source.fill(source);
     await this.account.click();
-   await this.amount.fill(ammount);
-   await this.buget.selectOption({ label: buget });
+   await this.amount.fill(amount);
+   await this.budget.selectOption({ label: budget });
    await this.submit.click();
   }
 
-  async createB(name: string, ammount: string, source: string){
+  async createB(name: string, amount: string, source: string){
     await this.description.fill(name);
     await this.source.fill(source);
     await this.account.click();
-    await this.amount.fill(ammount);
+    await this.amount.fill(amount);
     await this.submit.click();
 
   }
 
 
 
-  async createC(name: string, ammount: string, source: string, destination: string) {
+  async createC(name: string, amount: string, source: string, destination: string) {
     await this.description.fill(name);
     await this.source.fill(source);
     await this.page.getByText(source).click();
     await this.destination.fill(destination);
     await this.page.getByText(destination).click();
-   await this.amount.fill(ammount);
+   await this.amount.fill(amount);
    await this.submit.click();
   }
 }
