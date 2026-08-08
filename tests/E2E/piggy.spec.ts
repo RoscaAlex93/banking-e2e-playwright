@@ -17,10 +17,6 @@ const todayDate = getTodayDate();
   await loginPage.goto();
   await loginPage.login('test@test.ro', 'testtesttesttest');
 
- 
- // async create(name: string, currencyValue: string, balanceValue: string, TodayDate: string ) {
-
-
 await accountPage.goto();
 await accountPage.create(accountN, '1', '5000', todayDate);
   

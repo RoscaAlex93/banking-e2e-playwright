@@ -6,6 +6,8 @@ import { createCreditName } from '../../utils/dataFactory';
 import { getPreviousDayDate, getTodayDate } from '../../utils/date';
 import { transactionName } from '../../utils/dataFactory';
 import { createDBConnection } from '../../utils/db';
+
+
 test('user can login', async ({ page }) => {
   const loginPage = new LoginPage(page);
   const liabiliteiesPage = new LiabiliteiesPage(page);
@@ -17,6 +19,7 @@ const date = getPreviousDayDate();
 const transaction = transactionName();
 const today = getTodayDate();
 
+
   await loginPage.goto();
   await loginPage.login('test@test.ro', 'testtesttesttest');
 
@@ -24,12 +27,14 @@ const today = getTodayDate();
   await liabiliteiesPage.fillTheForm(name, '1', '10000', 'credit', date, '5', 'monthly');
 
   await withdrawalPage.gotocreateExpenses();
-  await withdrawalPage.createTrsansaction(transaction,'cont unu','cont', '100','category','tag',today,'notes');
+  await withdrawalPage.createTrsansactionSimple(transaction,'cont unu',name, '100',);
+
+  
 
   const [bugetDb] = await (connection as any).query(
   'SELECT * FROM accounts WHERE name = ?',
   [name]
 );
 
-expect(bugetDb.length).toBeGreaterThan(0);
+ await expect(bugetDb.length).toBeGreaterThan(0);
 });

@@ -27,7 +27,7 @@ test('user can login', async ({ page }) => {
   await accountPage.create(name, '1', '5000', todayDate);
 
     await withdrawalPage.gotocreateExpenses();
-  await withdrawalPage.createTrsansaction(transaction,'cont unu','cont', '100','category','tag',todayDate, 'notes');
+  await withdrawalPage.createTrsansaction(transaction,'cont unu','dawdawd','100', 'Nume2','1','tag',todayDate, 'notes');
 
 
   await reportsPage.goto();

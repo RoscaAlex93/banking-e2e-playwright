@@ -40,7 +40,7 @@ export class TransactionPage {
     this.interestDate = page.locator('input[name="interest_date[]"]');
     this.attachments = page.locator('input[name="attachments[]"]');
     this.notes = page.locator('textarea[name="notes[]"]');
-    this.submit = page.locator('#submitButton');
+    this.submit = page.locator('.btn-success');
   }
 
   async gotocreateExpenses() {
@@ -73,6 +73,18 @@ async gotocreateTransfer() {
   await this.interestDate.fill(interestdate);
   await this.attachments.setInputFiles('test-data/image.png');
   await this.notes.fill(notes);
+  await this.submit.click();
+  }
+
+    async createTrsansactionSimple(description: string, sourceAccount: string, destinationAccount: string, ammount: string) {
+  await this.description.fill(description);
+  await this.source.fill(sourceAccount);
+  await this.Saction.getByText(sourceAccount).click();
+  await this.destination.fill(destinationAccount);
+  await this.destination.click();
+  await this.Saction.getByRole('button', { name: destinationAccount}).click();
+  await this.amount.fill(ammount);
+  await this.foreignamount.fill(ammount);
   await this.submit.click();
   }
 }

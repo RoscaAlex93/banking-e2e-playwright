@@ -28,7 +28,7 @@ const connection = await createDBConnection();
   await revenuePage.filltheForm(name);
 
   await depositPage.gotocreateDeposit();
-  await depositPage.createTrsansaction(transaction,'cont unu','cont', '100','category','tag',Today, 'notes');
+  await depositPage.createTrsansaction(transaction,'cont unu','dawdawd','100', 'Nume2','1','tag',Today, 'notes');
 
  const [transactionDb] = await (connection as any).query(
  'SELECT * FROM transaction_journals WHERE description = ?',
