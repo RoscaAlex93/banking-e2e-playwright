@@ -54,6 +54,9 @@ async gotocreateDeposit() {
 async gotocreateTransfer() {
   await this.page.goto('/transactions/create/transfer')
 }
+async gotowithdrawlList() {
+  await this.page.goto('/transactions/withdrawal')
+}
 
   async createTrsansaction(description: string, sourceAccount: string, destinationAccount: string, ammount: string, buget: string, category: string, tag: string, interestdate: string, notes: string) {
   await this.description.fill(description);
@@ -87,4 +90,27 @@ async gotocreateTransfer() {
   await this.foreignamount.fill(ammount);
   await this.submit.click();
   }
+
+
+    async createTrsansactionSubscription(description: string, sourceAccount: string, destinationAccount: string, ammount: string, buget: string, category: string, tag: string, subscription: string, interestdate: string, notes: string) {
+  await this.description.fill(description);
+  await this.source.fill(sourceAccount);
+  await this.Saction.getByText(sourceAccount).click();
+  await this.destination.fill(destinationAccount);
+  await this.destination.click();
+  await this.Saction.getByRole('button', { name: destinationAccount}).click();
+  await this.amount.fill(ammount);
+  await this.foreignamount.fill(ammount);
+  await this.buget.selectOption({ label: buget });
+  await this.category.fill(category)
+  await this.Saction.getByRole('button', { name: category, exact: true}).click();
+  await this.piggyBank.selectOption('3');
+  await this.tags.fill(tag);
+  await this.subscription.selectOption({ label: subscription })
+  await this.interestDate.fill(interestdate);
+  await this.attachments.setInputFiles('test-data/image.png');
+  await this.notes.fill(notes);
+  await this.submit.click();
+  }
+  
 }
