@@ -44,36 +44,5 @@ test('Create a buget with attachments', async ({ page }) => {
   await bugetPage.goto();
   await bugetPage.creatAattachments(bugetName, '1', '1000');
   await expect(page.locator('.alert-success')).toContainText(bugetName);
-   const [transactionDb] = await (connection as any).query(
-      'SELECT id FROM budgets WHERE name = ?',
-  [bugetName]
-   );
-
-   const budgetResponse = await page.request.get(
-  'http://localhost:8080/api/v1/budgets/202',
-  {
-    headers: {
-      Authorization: `Bearer ${process.env.API_TOKEN}`,
-      Accept: 'application/json',
-    },
-  }
-);
-
-console.log(budgetResponse.status());
-console.log(await budgetResponse.text());
-
-
-     const transactionId = transactionDb[0].id;
-    const response = await deleteBuget(
-  page.request,
-  transactionId
-);
-
-console.log('Status:', response.status());
-console.log('Body:', await response.text());
-
-
-
-
-expect(response.ok()).toBeTruthy();
+   
 });

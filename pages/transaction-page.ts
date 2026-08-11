@@ -19,6 +19,7 @@ export class TransactionPage {
   readonly attachments: Locator;
   readonly notes: Locator;
   readonly submit: Locator;
+  readonly transactionTable: Locator;
 
 
 
@@ -41,6 +42,7 @@ export class TransactionPage {
     this.attachments = page.locator('input[name="attachments[]"]');
     this.notes = page.locator('textarea[name="notes[]"]');
     this.submit = page.locator('.btn-success');
+    this.transactionTable = page.locator('.table');
   }
 
   async gotocreateExpenses() {
@@ -113,4 +115,5 @@ async gotowithdrawlList() {
   await this.submit.click();
   }
   
+
 }

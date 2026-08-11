@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/login-page';
 import { PiggyPage } from '../pages/piggy-page';
-import { PiggyName } from '../utils/dataFactory';
+import { PiggyName, PyggyName2 } from '../utils/dataFactory';
 import { getTodayDate } from '../utils/date';
 
 
@@ -23,9 +23,10 @@ test('Create piggy account with optional fields', async ({ page }) => {
   const piggyPage = new PiggyPage(page);
 
   const name = PiggyName();
+  const name2 = PyggyName2();
   const today = getTodayDate();
 
-
+  
   await loginPage.goto();
   await loginPage.login('test@test.ro', 'testtesttesttest');
 
@@ -35,7 +36,7 @@ test('Create piggy account with optional fields', async ({ page }) => {
 
 
   await piggyPage.goto();
-  await piggyPage.createOptional(name, '1000', '1', 'asd', today, 'note');
+  await piggyPage.createOptional(name2, '1000', '1', 'asd', today, 'note');
   await expect(page.locator('.alert-success')).toContainText('Succes');
 
   

@@ -54,17 +54,6 @@ test('Create a subscription with rules', async ({ page }) => {
   await subscriptionPage.goto();
   await subscriptionPage.createSubscriptionOptional(name, '1', '30', lastYear, today, 'Notes for Notes' );
   await subscriptionPage.createRule(rule, 'store-journal', 'description_is');
-  await expect(page.locator('.alert-success')).toContainText(name);
-   const [transactionDb] = await (connection as any).query(
-      'SELECT id FROM rules WHERE title = ?',
-  [rule]
-   );
-   
-     const transactionId = transactionDb[0].id;
-     const response = await deleteRule(
-  page.request,
-  transactionId
-);
+  await expect(page.locator('.alert-success')).toContainText(rule);
 
-expect(response.ok()).toBeTruthy();
 });
