@@ -1,0 +1,1291 @@
+$kind: http-request
+name: Reception - BION
+url: https://api.bobnet.ro/reception_entry_notes
+method: POST
+headers:
+  - key: x-auth-token
+    value: 126D5D017A8801062853
+  - key: Content-Type
+    value: application/json
+  - key: Origin
+    value: https://bion.bobnet.ro
+body:
+  type: json
+  content: |-
+    {
+      "company": 230,
+      "typeDocument": 1,
+      "currency": 1,
+      "numberDocument": "442",
+      "documentDate": "2026-09-21",
+      "auto": "",
+      "dateInStock": "2026-09-21",
+      "delegate": "",
+      "internalObservations": "",
+      "observationCommitteeReception": "",
+      "observations": "",
+      "seriesDocument": 285,
+      "items": [
+        {
+          "batchNumber": "L001SN00001",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5179,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L002SN00002",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5180,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L003SN00003",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5181,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L004SN00004",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5182,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L005SN00005",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5183,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L006SN00006",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5184,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L007SN00007",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5185,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L008SN00008",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5186,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L009SN00009",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5187,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L010SN00010",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5188,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L011SN00011",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5189,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L012SN00012",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5190,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L013SN00013",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5191,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L014SN00014",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5192,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L015SN00015",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5193,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L016SN00016",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5194,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L017SN00017",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5195,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L018SN00018",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5196,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L019SN00019",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5197,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L020SN00020",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5198,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L021SN00021",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5199,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L022SN00022",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5200,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L023SN00023",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5201,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L024SN00024",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5202,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L025SN00025",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5203,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L026SN00026",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5204,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L027SN00027",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5205,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L028SN00028",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5206,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L029SN00029",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5207,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L030SN00030",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5208,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L031SN00031",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5209,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L032SN00032",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5210,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L033SN00033",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5211,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L034SN00034",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5212,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L035SN00035",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5213,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L036SN00036",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5214,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L037SN00037",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5215,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L038SN00038",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5216,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L039SN00039",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5217,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L040SN00040",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5218,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L041SN00041",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5219,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L042SN00042",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5220,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L043SN00043",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5221,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L044SN00044",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5222,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L045SN00045",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5223,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L046SN00046",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5224,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L047SN00047",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5225,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L048SN00048",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5226,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L049SN00049",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5227,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L050SN00050",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5228,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L051SN00051",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5229,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L052SN00052",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5230,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L053SN00053",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5231,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L054SN00054",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5232,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L055SN00055",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5233,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L056SN00056",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5234,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L057SN00057",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5235,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L058SN00058",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5236,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L059SN00059",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5237,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L060SN00060",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5238,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L061SN00061",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5239,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L062SN00062",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5240,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L063SN00063",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5241,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L064SN00064",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5242,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L065SN00065",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5243,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L066SN00066",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5244,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L067SN00067",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5245,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L068SN00068",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5246,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L069SN00069",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5247,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L070SN00070",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5248,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L071SN00071",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5249,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L072SN00072",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5250,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L073SN00073",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5251,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L074SN00074",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5252,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L075SN00075",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5253,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L076SN00076",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5254,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L077SN00077",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5255,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L078SN00078",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5256,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L079SN00079",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5257,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L080SN00080",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5258,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L081SN00081",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5259,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L082SN00082",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5260,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L083SN00083",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5261,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L084SN00084",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5262,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L085SN00085",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5263,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L086SN00086",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5264,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L087SN00087",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5265,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L088SN00088",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5266,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L089SN00089",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5267,
+          "rateVAT": 8,
+          "storage": 994
+        },
+        {
+          "batchNumber": "L090SN00090",
+          "expirationDate": "2026-09-21",
+          "quantityInvoice": "100",
+          "quantityReceived": "100",
+          "discount": {
+            "value": 0,
+            "isFixedValue": false
+          },
+          "pricePurchase": "0.1",
+          "product": 5268,
+          "rateVAT": 8,
+          "storage": 994
+        }
+      ]
+    }
+order: 1614929341754783

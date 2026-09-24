@@ -2,28 +2,26 @@ import { test, expect } from '@playwright/test';
 import { BugetPage } from '../../pages/buget-page';
 import { LoginPage } from '../../pages/login-page';
 import { BugetlistPage } from '../../pages/bugetlist-page';
-import { WithdrawalPage } from '../../pages/withdrawal-page';
+import { TransactionPage } from '../../pages/transaction-page';
 import { createBudgetName } from '../../utils/dataFactory';
 import { createDBConnection } from '../../utils/db';
 import { transactionName } from '../../utils/dataFactory';
+import { getTodayDate } from '../../utils/date';
 
 test('e2e flow for buget', async ({ page }) => {
   const bugetName = createBudgetName();
   const connection = await createDBConnection();
   const transactionDescription = transactionName();
-
-  const loginPage = new LoginPage(page);
+  const Today = getTodayDate();
   const bugetPage = new BugetPage(page);
-  const withdrawalPage = new WithdrawalPage(page);
+  const withdrawalPage = new TransactionPage(page);
   const bugetlistPage = new BugetlistPage(page);
 
-  await loginPage.goto();
-  await loginPage.login('test@test.ro', 'testtesttesttest');
 
   await bugetPage.goto();
   await bugetPage.create(bugetName);
 
-  await expect(bugetPage.successMessage).toContainText('Succes!');
+  await expect(bugetPage.successMessage).toContainText('Success!');
 
 
 
@@ -36,10 +34,9 @@ expect(bugetDb.length).toBeGreaterThan(0);
 
 
 
-await withdrawalPage.goto();
-await withdrawalPage.create(transactionDescription, '100', 'cont unu', bugetName);
-console.log('Generated description:', transactionDescription);
-await expect(withdrawalPage.successMessage).toContainText('Succes!');
+await withdrawalPage.gotocreateExpenses();
+await withdrawalPage.createTrsansaction(transactionDescription,'cont unu','dawdawd', '100',bugetName,'1','tag',Today, 'notes');
+await expect(page.locator('.alert-success')).toContainText('Success');
 
  const [transactionDb] = await (connection as any).query(
  'SELECT * FROM transaction_journals WHERE description = ?',
@@ -54,5 +51,4 @@ await connection.end();
 
 await bugetlistPage.goto();
 await page.getByRole('link', { name: bugetName }).click();
-await expect(page.getByText(transactionDescription)).toBeVisible();
-});
+await expect(page.getByRole('link', { name: transactionDescription })).toBeVisible();});

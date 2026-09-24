@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import 'dotenv/config';
 
 export default defineConfig({
   testDir: './tests',
@@ -18,7 +19,7 @@ export default defineConfig({
   use: {
     baseURL: 'http://localhost:8080',
 
-    headless: false, // vezi browser-ul
+    headless: false,
 
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
@@ -27,11 +28,18 @@ export default defineConfig({
 
   projects: [
     {
+      name: 'setup',
+      testDir: './fixtures',
+      testMatch: /auth\.setup\.ts/,
+    },
+    {
       name: 'webkit',
       use: {
         baseURL: 'http://localhost:8080',
-        ...devices['Desktop Safari'], // Safari-like
+        ...devices['Desktop Safari'],
+        storageState: 'playwright/.auth/user.json',
       },
+      dependencies: ['setup'],
     },
   ],
 });

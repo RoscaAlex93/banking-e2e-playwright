@@ -1,4 +1,4 @@
-import { Page, Locator } from '@playwright/test';
+import { Page, Locator, expect } from '@playwright/test';
 
 export class PiggyPage {
   readonly page: Page;
@@ -11,6 +11,11 @@ export class PiggyPage {
   readonly buttonsubmit: Locator;
   readonly savesum: Locator;
   readonly submit2: Locator;
+  readonly targetDate: Locator;
+  readonly notes: Locator;
+  readonly file: Locator;
+  readonly inputFile: Locator;
+  readonly succes: Locator;
 
 
   constructor(page: Page) {
@@ -24,6 +29,12 @@ export class PiggyPage {
     this.buttonsubmit = page.locator('button[type=submit]');
     this.savesum = page.locator('span[title="Saved so far"]');
     this.submit2 = page.locator('button[type=submit]');
+    this.targetDate = page.locator('#ffInput_target_date');
+    this.notes = page.locator('#ffInput_notes');
+    this.file = page.locator('#ffInput_attachments');
+    this.inputFile = page.locator('#ffInput_attachments');
+    this.succes = page.locator('.alert-success');
+
   }
 
   async goto() {
@@ -67,9 +78,18 @@ asertionPiggy(name: string) {
 
 async clickPiggy(name: string) {
 
-    await this.page
-     this.page.locator('a', { hasText: name })
-     .click();
+    await this.page.locator('a', { hasText: name }).click();
 
 }
-}
+
+  async createOptional(name: string, target: string, option: string, account: string, targetdate: string, note: string) {
+    await this.name.fill(name);
+    await this.target.fill(target);
+    await this.currency.selectOption(option);
+    await this.accounts.selectOption(account);
+
+    await this.targetDate.fill(targetdate);
+    await this.notes.fill(note);
+    await this.inputFile.setInputFiles('test-data/image.png');
+    await this.submit.click();
+  }}

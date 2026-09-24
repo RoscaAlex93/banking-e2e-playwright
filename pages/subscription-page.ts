@@ -13,6 +13,9 @@ export class SubscriptionPage {
   readonly extensionDate: Locator;
   readonly notes: Locator;
   readonly attachment: Locator;
+  readonly ruletitle: Locator;
+  readonly ruletrigger: Locator;
+  readonly triggertype: Locator;
 
 
   constructor(page: Page) {
@@ -29,6 +32,9 @@ export class SubscriptionPage {
     this.extensionDate = page.locator('#ffInput_extension_date');
     this.notes = page.locator('#ffInput_notes');
     this.attachment = page.locator('#ffInput_attachments');
+    this.ruletitle = page.locator('#ffInput_title');
+    this.ruletrigger = page.locator('#ffInput_trigger');
+    this.triggertype = page.locator('select[name="triggers[4][type]"]');
   }
 
   async goto() {
@@ -66,5 +72,13 @@ export class SubscriptionPage {
       await this.notes.fill(notes);
       await this.attachment.setInputFiles('test-data/image.png');
       await this.submit.click();
+    }
+
+    async createRule (title: string, trigerOption: string, trigerType: string){
+      await this.ruletitle.fill(title);
+      await this.ruletrigger.selectOption(trigerOption);
+      await this.triggertype.selectOption(trigerType);
+      await this.submit.click();
+
     }
 }
