@@ -10,12 +10,9 @@ const piggyN = PiggyName();
 const accountN = accountName();
 const todayDate = getTodayDate();
 
-  const loginPage = new LoginPage(page);
   const piggyPage = new PiggyPage(page);
   const accountPage = new AccountPage(page);
 
-  await loginPage.goto();
-  await loginPage.login('test@test.ro', 'testtesttesttest');
 
 await accountPage.goto();
 await accountPage.create(accountN, '1', '5000', todayDate);

@@ -9,7 +9,6 @@ import { subscriptionName } from '../../utils/dataFactory';
 import { transactionName } from '../../utils/dataFactory';
 
 test('user can login', async ({ page }) => {
-  const loginPage = new LoginPage(page);
   const reportsPage = new ReportsPage(page);
   const accountPage = new AccountPage(page);
   const withdrawalPage = new TransactionPage(page);
@@ -20,8 +19,6 @@ test('user can login', async ({ page }) => {
   const lastWeek = getLastWeek();
 
 
-  await loginPage.goto();
-  await loginPage.login('test@test.ro', 'testtesttesttest');
 
   await accountPage.goto();
   await accountPage.create(name, '1', '5000', todayDate);

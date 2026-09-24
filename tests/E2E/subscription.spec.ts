@@ -12,12 +12,8 @@ test('e2e flow for subscription', async ({ page }) => {
   
   const today = getTodayDate();
   const transactionDescription = transactionName();
-  const loginPage = new LoginPage(page);
   const subscriptionPage = new SubscriptionPage(page);
   const withdrawalPage = new TransactionPage(page);
-
-  await loginPage.goto();
-  await loginPage.login('test@test.ro', 'testtesttesttest');
 
 
   await subscriptionPage.goto();

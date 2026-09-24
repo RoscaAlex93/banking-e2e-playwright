@@ -13,13 +13,10 @@ test('e2e flow for buget', async ({ page }) => {
   const connection = await createDBConnection();
   const transactionDescription = transactionName();
   const Today = getTodayDate();
-  const loginPage = new LoginPage(page);
   const bugetPage = new BugetPage(page);
   const withdrawalPage = new TransactionPage(page);
   const bugetlistPage = new BugetlistPage(page);
 
-  await loginPage.goto();
-  await loginPage.login('test@test.ro', 'testtesttesttest');
 
   await bugetPage.goto();
   await bugetPage.create(bugetName);

@@ -9,7 +9,6 @@ import { createDBConnection } from '../../utils/db';
 
 
 test('user can login', async ({ page }) => {
-  const loginPage = new LoginPage(page);
   const liabiliteiesPage = new LiabiliteiesPage(page);
   const withdrawalPage = new TransactionPage(page);
 
@@ -17,11 +16,8 @@ test('user can login', async ({ page }) => {
 const name = createCreditName();
 const date = getPreviousDayDate();
 const transaction = transactionName();
-const today = getTodayDate();
 
 
-  await loginPage.goto();
-  await loginPage.login('test@test.ro', 'testtesttesttest');
 
   await liabiliteiesPage.gotoCreate();
   await liabiliteiesPage.fillTheForm(name, '1', '10000', 'credit', date, '5', 'monthly');
